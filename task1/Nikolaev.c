@@ -24,8 +24,8 @@ int main()
   }
 
   if ((abs(x2-x1)==1 && abs(y2-y1)==1) ||
-       (abs(x2-x1)==1 && abs(y2-y1)==0) ||
-       (abs(x2-x1)==0 && abs(y2-y1)==1)){
+      (abs(x2-x1)==1 && abs(y2-y1)==0) ||
+      (abs(x2-x1)==0 && abs(y2-y1)==1)){
     printf("Король\n");
   }
 
