@@ -10,7 +10,7 @@ int main(){
         printf("Incorrect input");
     }
     else{
-        //Король
+        //ГЉГ®Г°Г®Г«Гј
         if (abs(x1-x2)<2 && abs(y1-y2)<2){
             printf("Korol mojet popast\n");
         }
@@ -18,7 +18,7 @@ int main(){
             printf("Korol ne mojet popast\n");
         }
 
-        //Ладья
+        //Г‹Г Г¤ГјГї
         if ((x1==x2) || (y1==y2)){
             printf("Ladja mojet popast\n");
         }
@@ -26,7 +26,7 @@ int main(){
             printf("Ladja ne mojet popast\n");
         }
 
-        //Конь
+        //ГЉГ®Г­Гј
         if (((abs(x1-x2)==1) && (abs(y1-y2)==2)) || ((abs(x1-x2)==2) && (abs(y1-y2)==1))){
             printf("Kon mojet popast\n");
         }
@@ -34,7 +34,7 @@ int main(){
             printf("Kon ne mojet popast\n");
         }
 
-        //Слон
+        //Г‘Г«Г®Г­
         if (abs(x1-x2)==abs(y1-y2)){
             printf("Slon mojet popast\n");
         }
@@ -42,7 +42,7 @@ int main(){
             printf("Slon ne mojet popast\n");
         }
 
-        //Ферзь
+        //Г”ГҐГ°Г§Гј
         if ((abs(x1-x2)==abs(y1-y2)) || (x1==x2) || (y1==y2)){
             printf("Ferz mojet popast\n");
         }
