@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <time.h>
 
+int f_rand(int a, int b){
+    srand(time(NULL));
+    int guess = rand() % ((b - a) + 1) + a;
+    return guess;
+
+}
+
 void main(){
     int mode;
     printf("What mode would you like?(1 or 2)\n");
     scanf("%d", &mode);
 
     if (mode == 1){ // mode 1
-        srand(500);
+        srand(time(NULL));
         int num = rand() % 1001;
         int guess;
         int k = 0;
@@ -40,6 +47,7 @@ void main(){
     }
 
     if (mode == 2){ // mode 2
+        printf("Mode2");
         srand(0);
         int num;
         int left = 0;
@@ -47,17 +55,22 @@ void main(){
         char ch;
         printf("Pick a number(0..1000): ");
         scanf("%d", &num);
-
-        printf("%d \n", rand()%1001);
         scanf("%c", &ch);
-        if (ch == "="){
+        //printf("%d\n", f_rand(left, right));
+
+        if (ch == '='){
             printf("nice!");
         }
-        else if(ch == ">"){
+        else if(ch == '>'){
             printf("so its bigger");
         }
-        else{
-            printf("so its smaller");
+        else if(ch == '<'){
+                printf("so its smaller");
         }
+    }
+
+    if (mode == 3) {
+        char x;
+        scanf("%c", &x);
     }
 }
