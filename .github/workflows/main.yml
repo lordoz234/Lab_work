@@ -22,5 +22,8 @@ jobs:
         cmake ..
         cmake --build .
         cd ..
+    - name: Test
+      run: |
+        python3 scripts/run_test.py
       env:
         CC: gcc-9
