@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int compare(const void* a, const void* b) {
-    const int* num1 = (const int*)a;
-    const int* num2 = (const int*)b;
-
-    return (*num1 - *num2);
+void sort(int arr[], int n) {
+    return;
 }
 
 int main() {
@@ -15,9 +12,9 @@ int main() {
     for (int i = 0; i < n; i++) {
         scanf("%d", &array[i]);
     }
-    qsort(array, n, sizeof(int), compare);
+    sort(array, n);
     for (int i = 0; i < n; i++) {
-        printf("%d ", array[i]);
+        printf("%d ", array[i] + 1);
     }
     return 0;
 }

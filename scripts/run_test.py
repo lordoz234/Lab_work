@@ -3,9 +3,10 @@ import glob
 import os
 import random
 import sys
+from typing import Tuple
 
 
-def test(array: list, executable_path: str) -> bool:
+def test(array: list, executable_path: str) -> Tuple[bool, list, list]:
     args = str(len(array)) + "\n"
     args += "\n".join(str(x) for x in array)
 
@@ -15,7 +16,7 @@ def test(array: list, executable_path: str) -> bool:
 
     result = [int(x) for x in res.stdout.decode().split(" ")[:-1]]
 
-    return result == sorted(array)
+    return result == sorted(array), result, sorted(array)
 
 
 def get_random_array(num: int) -> list:
@@ -40,5 +41,13 @@ if __name__ == "__main__":
         ex = "./" + directory_path + "/" + executable_file
         for _ in range(5):
             length = random.randint(1, 100)
-            if not test(get_random_array(length), ex):
+            res, actual, expected = test(get_random_array(length), ex)
+            print(res)
+            print(actual == expected)
+            if not res:
+                print("Wrong Answer")
+                print("Actual: ", actual)
+                print("Expected: ", expected)
                 sys.exit(1)
+
+    print("All Done!!!")
