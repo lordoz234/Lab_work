@@ -19,8 +19,8 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake -D ..
-        cmake --build . --config -j4
+        cmake ..
+        cmake --build .
         cd ..
       env:
         CC: gcc-9
