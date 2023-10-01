@@ -7,6 +7,20 @@ from typing import Tuple
 
 
 def test(array: list, executable_path: str) -> Tuple[bool, list, list]:
+    """
+    Function to test
+
+    Parameters
+    ----------
+    array : Array
+        list
+    executable_path : Path to execution file
+        str
+
+    Returns
+    -------
+    True/False and actual, expected arrays
+    """
     args = str(len(array)) + "\n"
     args += "\n".join(str(x) for x in array)
 
@@ -20,6 +34,18 @@ def test(array: list, executable_path: str) -> Tuple[bool, list, list]:
 
 
 def get_random_array(num: int) -> list:
+    """
+    Function to get random array
+
+    Parameters
+    ----------
+    num : Number of elements in array
+        int
+
+    Returns
+    -------
+    Random Array
+    """
     random_array = [random.randint(1, 10000) for _ in range(num)]
 
     return random_array
@@ -42,8 +68,6 @@ if __name__ == "__main__":
         for _ in range(5):
             length = random.randint(1, 100)
             res, actual, expected = test(get_random_array(length), ex)
-            print(res)
-            print(actual == expected)
             if not res:
                 print("Wrong Answer")
                 print("Actual: ", actual)
