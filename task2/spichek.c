@@ -2,7 +2,7 @@
 #include <locale.h>
 #include <time.h>
 
-f2() {   //2 режим
+void f2() {   //2 режим
 	int answer, left, right, mid, ch, otvet, k, zagadch;
 	char znak;
 	right = 1000;
@@ -21,7 +21,7 @@ f2() {   //2 режим
 	while (right - left > 2) {
 		mid = (left + right) / 2 + (left + right) % 2;
 
-		//printf("%d %d %d\n", left, mid, right);
+		///printf("%d %d %d\n", left, mid, right);
 
 		do {
 			printf("Заданное число больше %d? (Введите >, < или =)\n", mid);
@@ -54,6 +54,7 @@ f2() {   //2 режим
 
 		//printf("%d %d %d\n", left, mid, right);
 
+
 		do {
 			//printf("> < =\n");
 			printf("Заданное число больше %d? (Введите >, < или =)\n", mid);
@@ -84,7 +85,7 @@ f2() {   //2 режим
 }
 
 
-f1() {
+void f1() {
 	int answer, user, ch, k;
 	
 	k = 0;
@@ -93,7 +94,6 @@ f1() {
 	
 	srand(time(NULL));
 	answer = rand() % 1000 + 1;
-	printf("%d\n",answer);
 
 	do {
 		do {
