@@ -18,9 +18,9 @@ void main() {
 			flag = 0;
 			printf("Введите число:");
 			scanf_s("%d", &x);
-			if (x <  num1) {
+			if (x < num1) {
 				printf("Загаданное число больше\n");
-				k ++;
+				k++;
 				flag = 1;
 			}
 			else if (x > num1) {
@@ -33,7 +33,7 @@ void main() {
 		if (x == num1) {
 			k++;
 			printf("Угадали!\n");
-			printf("Количество попыток: %d",  k);
+			printf("Количество попыток: %d", k);
 		}
 		
 		
@@ -48,7 +48,7 @@ void main() {
 		scanf_s("%d", &num2);
 		
 		while (c!='=') {
-			printf("Это число %d? \n", mid);
+			printf("Это число %d?\n", mid);
 			printf("Введите подсказку: ");
 			scanf_s("\n%c", &c);
 			k++;
