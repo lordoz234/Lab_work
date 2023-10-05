@@ -14,8 +14,6 @@ void main(){
         int k = 0;
         int counter = 0;
 
-        //printf("%d", num);
-
         printf("Guess a number(0..1000): ");
         scanf("%d", &guess);
 
@@ -37,9 +35,8 @@ void main(){
             }
         }
         printf("You number of guesses is %d.", counter);
-
     }
-
+    
     if (mode == 2){ // mode 2
         int num;
         int left = 0;
