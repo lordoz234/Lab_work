@@ -4,9 +4,10 @@
 #include <locale.h>
 #include <stdlib.h>
 #include <ctype.h>
+
 int otgp=10000;
 char vvp = 'f';
-void f1(zagk) {
+void f1(int zagk) {
 	int kpop;
 	kpop = 0;
 	otgp = 10000;
@@ -38,6 +39,7 @@ void f1(zagk) {
 		}
 	}
 }
+
 void f2() {
 	int otgk,sotgk, code,c;
 	sotgk = 1000;
