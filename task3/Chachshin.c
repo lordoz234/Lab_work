@@ -13,10 +13,11 @@ int sort(int arr[], int n) {
 }
 
 int main() {
-    int n = 10;
-    int array[10];
+    int n;
+    scanf("%d", &n);
+    int array[n];
     for (int i = 0; i < n; i++) {
-        scanf_s("%d", &array[i]);
+        scanf("%d", &array[i]);
     }
     sort(array, n);
     for (int i = 0; i < n; i++) {
