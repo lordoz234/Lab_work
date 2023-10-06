@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 void odin();
 void second();
@@ -49,7 +50,7 @@ void second(){
     printf("zagadau`te chislo ot 1 do 1000  ");
     scanf_s("%d",&x);
     while (right - left >= 1){
-        int mid=left+(right-left) / 2;
+        int mid = left + (right - left) / 2;
         printf("Moe predpolojenie: %d   ", mid);
         printf("\n");
         printf("vvedite znak >, <, = (vashe chislo ....)    ");
