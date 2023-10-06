@@ -17,15 +17,12 @@ void sort(int arr[], int n) {
 
 int main() {
     int n;
-    printf("Input long of array\n");
     scanf("%d", &n);
     int array[n];
-    printf("Input elements of array\n");
     for (int i = 0; i < n; i++) {
         scanf("%d", &array[i]);
     }
     sort(array, n);
-    printf("Sorted array\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", array[i]);
     }
