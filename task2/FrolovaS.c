@@ -2,6 +2,7 @@
 #include<locale.h>
 #include<stdlib.h>
 #include<math.h>
+
 int f1(void){
     srand(0);
     int t;
