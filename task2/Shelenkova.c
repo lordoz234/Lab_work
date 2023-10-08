@@ -1,10 +1,11 @@
 #include <locale.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
 	setlocale(LC_ALL, "Rus");
-	printf("Выбор режима: \n 1)Загадывает программа\n 2)Загадывает пользователь\n");
+	printf("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: \n 1)пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n 2)пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n");
 
 	int mode;
 	srand(time(0));
@@ -16,30 +17,28 @@ int main()
 	if (mode == 1)
 	{
 		int number = rand() % 1000;
-		//printf("%d", number);
-		//printf(" загаданное");
 		int count = 0;
 		int valid = 0;
 		int guess;
 		while (valid != 1)
 		{
-			printf("Введите число: ");
+			printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: ");
 			scanf_s("%d", &guess);
 			printf("\n");
 			if (guess > number)
 			{
-				printf("Загаданное число меньше\n");
+				printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ\n");
 				++count;
 			}
 			else if (guess < number)
 			{
-				printf("Загаданное число больше\n");
+				printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ\n");
 				++count;
 			}
 			else
 			{
-				printf("Угадали\n");
-				printf("Кол - во попыток = ");
+				printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n");
+				printf("пїЅпїЅпїЅ - пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ = ");
 				printf("%d", count);
 				return 1;
 			}
@@ -53,7 +52,7 @@ int main()
 		{
 			numbers[i] = i + 1;
 		};
-		printf("Введите число: ");
+		printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: ");
 		printf("\n");
 		int number, index;
 		scanf_s("%d", &index);
@@ -66,10 +65,10 @@ int main()
 		int guess_p = 0;		
 		while (valid != 1)
 		{
-			printf("Загаданное: ");
+			printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ");
 			printf("%d", number);
 			printf("\n");
-			printf("Предположение: ");
+			printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ");
 			guess = numbers[f_index + rand() % p_index];
 			printf("%d", guess);
 			printf("\n\n");
@@ -90,8 +89,8 @@ int main()
 				else
 				{
 
-					printf("Программа угадала\n");
-					printf("Кол - во попыток = ");
+					printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n");
+					printf("пїЅпїЅпїЅ - пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ = ");
 					printf("%d", count);
 					return 2;
 				}
