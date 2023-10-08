@@ -20,7 +20,7 @@ int main() {
     scanf("%d", &n);
     int array[n];
     for (int i = 0; i < n; i++) {
-        scanf_s("%d", &array[i]);
+        scanf("%d", &array[i]);
     }
     sort(array, n);
     for (int i = 0; i < n; i++) {
