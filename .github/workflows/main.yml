@@ -1,0 +1,29 @@
+name: Build application
+
+on: [push, pull_request]
+
+jobs:
+  ubuntu-gcc-build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup environment
+      run: |
+        sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+        sudo apt-get update
+        sudo apt-get install g++-9
+        sudo apt-get install python3-pip
+        sudo python3 -m pip install --upgrade pip
+        sudo python3 -m pip install setuptools cpplint
+    - name: Build
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        cd ..
+    - name: Test
+      run: |
+        python3 scripts/run_test.py
+      env:
+        CC: gcc-9
