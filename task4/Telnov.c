@@ -6,9 +6,9 @@ int hod(int** pol, int x, int y, int N, int M, int **ya) {
 	if (x < 0 || x >= N || y < 0 || y >= M || pol[x][y] == 0 || ya[x][y] == 1) {
 		return false;
 	}
-
+	
 	ya[x][y] = 1;
-
+	
 	if (x == 0 && y == M - 1) {
 		return true;
 	}
