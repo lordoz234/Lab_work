@@ -51,6 +51,13 @@ int main() {
 		printf("pyt nauden\n");
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
+				if (ya[i][j] != 1) {
+					ya[i][j] = 0;
+				}
+			}
+		}
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
 				printf("%d ", ya[i][j]);
 			}
 			printf("\n");
