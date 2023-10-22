@@ -21,7 +21,7 @@ int rec(int (x), int(y), int(wh), int(lh), int( **a)) {
 #define release
 
 void main() {
-	srand(time(NULL));
+	srand(3);
 	int wh = 0, lh = 0, res = 0;
 	printf("enter width and length of maze: ");
 	scanf_s("%d %d", &wh, &lh);
@@ -37,16 +37,24 @@ void main() {
 
 	for (int i = 0; i < lh; i++) {
 		for (int j = 0; j < wh; j++) {
+
+			#ifdef release
 			a[i][j] = rand()%2;
-		}
+			#endif
+			#ifdef debug
+			scanf_s(" %d", &a[i][j]);
+			#endif
+		}	
 	}
+	a[0][0] = 1;
+	a[lh - 1][wh - 1] = 1;
 	for (int i = 0; i < lh; i++) {
 		for (int j = 0; j < wh; j++) {
 			printf("%d ",a[i][j]);
 		}
 		printf("\n");
 	}
-	res = rec(0, 0, wh, lh, a);
+	res = rec(0, 0, lh, wh, a);
 
 	#ifdef debug
 	printf("%d", res);
