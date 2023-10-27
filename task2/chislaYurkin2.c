@@ -14,9 +14,6 @@ void main(){
 
         x = rand()%1000;
         printf("Computer guessed a number %d \n",x);
-
-
-
         do{
             printf("Enter the number \n");
         scanf("%d",&y);
@@ -39,17 +36,12 @@ void main(){
         }
         while(x!=y);
     }
-
-
-
         if (rezhim==2){
             int lv=0;
             int prv=1000;
             int count=0;
             int cntr=0;
             char Symbol;
-
-
             printf("Guess the number\n");
             while((prv-lv)>=1){
                 int center = (lv+prv)/2;
@@ -57,13 +49,11 @@ void main(){
 
                 printf("Computer think that your number %d\n",cntr);
                 printf("More or less?/</>/=\n");
-                scanf("%c",&Symbol);
+                scanf(" %c",&Symbol);
                 if (Symbol == '>'){
                 count++;
                 lv=center;
-
-
-                }
+                 }
                 else if (Symbol== '<'){
                     printf("The number is less\n");
                     count++;
@@ -74,11 +64,7 @@ void main(){
                     printf("The computer guessed the number\n ");
                     printf("Attempts %d\n",count);
                     break;
-
-
                 }
-
-
             }
         }
     }
