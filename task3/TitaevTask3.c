@@ -9,7 +9,7 @@ void sort(int arr[], int n) {
                 int a = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = a;
-                ++k;
+                ++kol;
             }
         }
     }
