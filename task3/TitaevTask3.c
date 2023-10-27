@@ -18,10 +18,10 @@ void sort(int arr[], int n) {
 
 int main() {
     int n;
-    scanf_c("%d", &n);
+    scanf("%d", &n);
     int arr[n];
     for (int i = 0; i < n; i++) {
-        scanf_c("%d", &arr[i]);
+        scanf("%d", &arr[i]);
     }
     sort(arr, n);
     for (int i = 0; i < n; i++) {
