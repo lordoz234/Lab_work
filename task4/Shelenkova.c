@@ -24,7 +24,7 @@ void main()
 	printf("Enter field size\n");
 	int x_s, y_s;
 	scanf_s("%d%d", &x_s, &y_s);
-	int** field = malloc(x_s * sizeof(int));
+	int** field = malloc(x_s * sizeof(int*));
 	for (int i = 0; i < x_s; i++) 
 	{
 		field[i] = malloc(y_s * sizeof(int));
@@ -42,7 +42,7 @@ void main()
 	field[x_s - 1][0] = 1;
 	field[0][y_s - 1] = 1;
 
-	int** road = malloc(x_s * sizeof(int));
+	int** road = malloc(x_s * sizeof(int*));
 	for (int i = 0; i < x_s; i++)
 	{
 		road[i] = malloc(y_s * sizeof(int));
