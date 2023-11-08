@@ -1,28 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-//-----------------ПУЗЫРЕК---------------------------------------------------
-void sort(int arr[], int n)
-{
-    for (int i = 0; i < n; ++i)
-    {
-        for (int j = 0; j < n; ++j)
-        {
-            if (arr[i] <= arr[j])
-            {
-                int c;
-                c = arr[i];
-                arr[i] = arr[j];
-                arr[j] = c;
-            }
-        }
-    }
-    return arr;
-}
-// --------------------------------------------------------------------------------
-
 //-------------------БЫСТРАЯ-------------------------------------------------------
-void recurs(int array[], int first, int last)
+void sort(int array[], int first, int last)
 {
 
     int l = first;
@@ -46,37 +25,23 @@ void recurs(int array[], int first, int last)
             r--;
         }
     }
-    recurs(array, first, r);
-    recurs(array, l, last);
+    sort(array, first, r);
+    sort(array, l, last);
 }
-// --------------------------------------------------------------------------------
 
 int main()
 {
     int n;
     scanf("%d", &n);
     int array[n];
-    int array2[n];
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &array[i]);
     }
-    for (int j = 0; j < n; ++j)
-    {
-        array2[j] = array[j];
-    }
-    recurs(array, 0, n - 1);
-    sort(array2, n);
-    printf("slow ");
+    sort(array, 0, n);
     for (int i = 0; i < n; i++)
     {
         printf("%d ", array[i]);
-    }
-    printf("\n");
-    printf("fast ");
-    for (int s = 0; s < n; s++)
-    {
-        printf("%d ", array2[s]);
     }
     return 0;
 }
