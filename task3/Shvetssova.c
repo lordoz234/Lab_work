@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void sort(int array[], int first, int last)
+void sort(int array[], int size) {
+    sort1(array, 0, size);
+}
+
+void sort1(int array[], int first, int last)
 {
 
     int l = first;
@@ -38,7 +42,7 @@ int main()
     {
         scanf("%d", &array[i]);
     }
-    sort(array, 0, n);
+    sort(array, n);
     for (int i = 0; i < n; i++)
     {
         printf("%d ", array[i]);
