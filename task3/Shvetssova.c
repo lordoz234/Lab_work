@@ -29,8 +29,8 @@ void sort1(int array[], int first, int last)
             r--;
         }
     }
-    sort(array, first, r);
-    sort(array, l, last);
+    sort1(array, first, r);
+    sort1(array, l, last);
 }
 
 int main()
