@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 void sort(int array[], int size) {
-    sort1(array, 0, size);
+    sort1(array, 0, size - 1);
 }
 
 void sort1(int array[], int first, int last)
