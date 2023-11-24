@@ -742,7 +742,7 @@ int main() {
 
 	printf(" Hello dear friend! You got into my game. To begin with, choose a hero for whom you will begin your transformations.\n");
 
-	while (gerou < 1) {
+	while (gerou != 1 || gerou != 2 || gerou != 3) {
 		printf(" 3 heroes are presented to your attention: 1 - Cobalt, 2 - Volt, 3 - Pyrus.\n");
 		printf(" Write the number of the selected hero. To find out information about each hero write: For Cobalt - 11; For Volt - 21; For Pyrus - 31.\n");
 		scanf_s("%d", &gerou);
